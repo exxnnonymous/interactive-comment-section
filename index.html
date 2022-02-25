@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive comments section</title>
+  </head>
+  <body>
+    <main>
+      <section aria-label="Comment section" class="comment_section">
+        <div class="container">
+          <ul class="list_of_comments grid">
+
+            <!-- adding dummy data ... -->
+            <!-- comments will be updated after script loads -->
+            <li class="comment_item grid" id="comment_1" data-comment>
+              <div class="grid comment_grid_layout box-shadow main_comment">
+                <div class="comment_header">
+                  <img
+                    class="small_rounded_img"
+                    src="./images/avatars/image-amyrobson.png"
+                    alt="profile_picture"
+                  />
+                  <h3>amyrobson</h3>
+                  <span> 1 month ago </span>
+                </div>
+                <p class="comment_description">
+                  Impressive! Though it seems the drag feature could be
+                  improved. But overall it looks incredible. You've nailed the
+                  design and the responsiveness at various breakpoints works
+                  really well.
+                </p>
+                <div class="like_unlike_comment">
+                  <button type="button" class="btn button_like">
+                    <svg
+                      width="11"
+                      height="11"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z"
+                        fill="#C5C6EF"
+                      />
+                    </svg>
+                  </button>
+                  <span>12</span>
+                  <button type="button" class="btn button_unlike">
+                    <svg
+                      width="11"
+                      height="3"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z"
+                        fill="#C5C6EF"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn purple_btn reply_btn">
+                  <svg
+                    width="14"
+                    height="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z"
+                      fill="#5357B6"
+                    />
+                  </svg>
+                  Reply
+                </button>
+              </div>
+            </li>
+            <li class="comment_item grid" id="comment_1" data-comment>
+              <div class="grid comment_grid_layout box-shadow main_comment">
+                <div class="comment_header">
+                  <img
+                    class="small_rounded_img"
+                    src="./images/avatars/image-maxblagun.png"
+                    alt="profile_picture"
+                  />
+                  <h3>maxblagun</h3>
+                  <span> 2 weeks ago </span>
+                </div>
+                <p class="comment_description">
+                  Woah, your project looks awesome! How long have you been
+                  coding for? I'm still new, but think I want to dive into React
+                  as well soon. Perhaps you can give me an insight on where I
+                  can learn React? Thanks!
+                </p>
+                <div class="like_unlike_comment">
+                  <button type="button" class="btn button_like">
+                    <svg
+                      width="11"
+                      height="11"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z"
+                        fill="#C5C6EF"
+                      />
+                    </svg>
+                  </button>
+                  <span>5</span>
+                  <button type="button" class="btn button_unlike">
+                    <svg
+                      width="11"
+                      height="3"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z"
+                        fill="#C5C6EF"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn purple_btn reply_btn">
+                  <svg
+                    width="14"
+                    height="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z"
+                      fill="#5357B6"
+                    />
+                  </svg>
+                  Reply
+                </button>
+              </div>
+              <ul class="comment_replies grid">
+                <li class="reply_item_wrap" data-comment-reply>
+                  <div class="reply_item comment_grid_layout grid box-shadow">
+                    <div class="comment_header">
+                      <img
+                        class="small_rounded_img"
+                        src="./images/avatars/image-ramsesmiron.png"
+                        alt="profile_picture"
+                      />
+                      <h3>ramsesmiron</h3>
+                      <span> 1 week ago </span>
+                    </div>
+                    <p class="comment_description">
+                      <span class="replying_to_span">@maxblagun</span>
+                      If you're still new, I'd recommend focusing on the
+                      fundamentals of HTML, CSS, and JS before considering
+                      React. It's very tempting to jump ahead but lay a solid
+                      foundation first.
+                    </p>
+                    <div class="like_unlike_comment">
+                      <button type="button" class="btn button_like">
+                        <svg
+                          width="11"
+                          height="11"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z"
+                            fill="#C5C6EF"
+                          />
+                        </svg>
+                      </button>
+                      <span>4</span>
+                      <button type="button" class="btn button_unlike">
+                        <svg
+                          width="11"
+                          height="3"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z"
+                            fill="#C5C6EF"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <button class="btn purple_btn reply_btn">
+                      <svg
+                        width="14"
+                        height="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z"
+                          fill="#5357B6"
+                        />
+                      </svg>
+                      Reply
+                    </button>
+                  </div>
+                </li>
+                <li class="reply_item_wrap" data-comment-reply>
+                  <div class="reply_item comment_grid_layout grid box-shadow">
+                    <div class="comment_header">
+                      <img
+                        class="small_rounded_img"
+                        src="./images/avatars/image-juliusomo.png"
+                        alt="profile_picture"
+                      />
+                      <h3>juliusomo</h3>
+                      <div class="your_reply_tag">you</div>
+                      <span> 2 days ago </span>
+                    </div>
+                    <p class="comment_description">
+                      <span class="replying_to_span">@ramsesmiron</span>
+                      I couldn't agree more with this. Everything moves so fast
+                      and it always seems like everyone knows the newest
+                      library/framework. But the fundamentals are what stay
+                      constant.
+                    </p>
+                    <div class="like_unlike_comment">
+                      <button type="button" class="btn button_like">
+                        <svg
+                          width="11"
+                          height="11"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z"
+                            fill="#C5C6EF"
+                          />
+                        </svg>
+                      </button>
+                      <span>2</span>
+                      <button type="button" class="btn button_unlike">
+                        <svg
+                          width="11"
+                          height="3"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z"
+                            fill="#C5C6EF"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="delete_edit_btn">
+                      <button class="btn red_btn comment_del_btn">
+                        <svg
+                          width="12"
+                          height="14"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z"
+                            fill="#ED6368"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+
+                      <button class="btn purple_btn comment_edit_btn">
+                        <svg
+                          width="14"
+                          height="14"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.479 2.872 11.08.474a1.75 1.75 0 0 0-2.327-.06L.879 8.287a1.75 1.75 0 0 0-.5 1.06l-.375 3.648a.875.875 0 0 0 .875.954h.078l3.65-.333c.399-.04.773-.216 1.058-.499l7.875-7.875a1.68 1.68 0 0 0-.061-2.371Zm-2.975 2.923L8.159 3.449 9.865 1.7l2.389 2.39-1.75 1.706Z"
+                            fill="#5357B6"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div
+            class="send_comment_box reply_box grid bg-box-gray box-shadow"
+            id="main_send_comment_box"
+          >
+            <div class="reply-box-pro-img">
+              <img
+                class="small_rounded_img"
+                src="./images/avatars/image-juliusomo.png"
+                alt="profile-pic"
+              />
+            </div>
+            <textarea
+              placeholder="Add a comment..."
+              name="comment-box"
+              id="main_comment_area"
+            ></textarea>
+            <button class="btn bg-purple" onclick="handleSendComment()">
+              SEND
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="modal modal_hide" id="modal_element">
+      <div class="modal_inner_box grid">
+        <h4>Delete comment</h4>
+        <p>
+          Are you sure you want to delete this comment? This will remove the
+          comment and can't be undone.
+        </p>
+        <div class="modal_buttons">
+          <button class="btn bg-gray" id="cancel_delete_btn">No, cancel</button>
+          <button class="btn bg-red" id="delete_btn">Yes, delete</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
